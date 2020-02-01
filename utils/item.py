@@ -1,6 +1,6 @@
 """Represent an item in the warehouse"""
 
-from dimensions import SpatialDimensions
+from utils.dimensions import SpatialDimensions
 
 class Item:
     """Representation of an item in the warehouse"""
