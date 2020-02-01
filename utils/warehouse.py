@@ -28,7 +28,10 @@ class Warehouse:
     def __init__(self, *, item_locations: Iterable[object, Location]):
         raise NotImplementedError
 
-    def get_items_near_location(self, *, location, tolerance):
+    def move_item(self, *, item, old_location, new_location):
+        raise NotImplementedError
+
+    def get_items_near_location(self, *, location: Location, tolerance):
         """Find all items that are near the given location within the tolerance given"""
         raise NotImplementedError
 
