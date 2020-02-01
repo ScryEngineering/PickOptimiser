@@ -40,4 +40,8 @@ class Warehouse:
 
     def get_locations_of_item(self, *, item) -> List:
         """Find the locations where items are currently located"""
-        raise NotImplementedError
+        res = []
+        for current_item, loc in self._item_locs.items():
+            if current_item == item:
+                res.append(loc)
+        return res
