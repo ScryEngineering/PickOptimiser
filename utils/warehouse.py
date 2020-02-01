@@ -12,7 +12,7 @@
 Heights represented as z
 """
 
-from typing import Iterable
+from typing import Iterable, List
 
 class Location:
     """represent the location of some entity in physical coordinates"""
@@ -26,15 +26,18 @@ class Location:
 class Warehouse:
     """Keep track of where items are in a warehouse"""
     def __init__(self, *, item_locations: Iterable[object, Location]):
-        raise NotImplementedError
+        self._item_locs: dict = {}
+        for item, loc in item_locations:
+            self._item_locs[item] = loc
 
-    def move_item(self, *, item, old_location, new_location):
+    def move_item(self, *, item, quantity: int=1, old_location, new_location):
+        """Move a quantity of items from one place to another"""
         raise NotImplementedError
 
     def get_items_near_location(self, *, location: Location, tolerance):
         """Find all items that are near the given location within the tolerance given"""
         raise NotImplementedError
 
-    def get_locations_of_item(self, *, item):
+    def get_locations_of_item(self, *, item) -> List:
         """Find the locations where items are currently located"""
         raise NotImplementedError
