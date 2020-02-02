@@ -6,7 +6,7 @@ ureg = pint.UnitRegistry()
 
 class SpatialDimensions:
     """Represent spatial dimensions"""
-    def __init__(self, *, length, width, height):
+    def __init__(self, *, length, width, height) -> None:
         """Spatial dimensions
         TODO: force dimensionality check using Pint"""
         self.length = length

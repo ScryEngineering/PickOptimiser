@@ -4,7 +4,7 @@ from utils.dimensions import SpatialDimensions
 
 class Item:
     """Representation of an item in the warehouse"""
-    def __init__(self, *, SKU, weight, dimensions: SpatialDimensions, max_stack: int=1):
+    def __init__(self, *, SKU, weight, dimensions: SpatialDimensions, max_stack: int=1) -> None:
         """Representations of an item to be stored
         SKU: stock keeping unit (TODO: is this unique?)
         weight: the weight of the item

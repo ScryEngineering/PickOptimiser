@@ -16,7 +16,7 @@ from typing import Iterable, List, Tuple
 
 class Location:
     """represent the location of some entity in physical coordinates"""
-    def __init__(self, *, x, y, z):
+    def __init__(self, *, x, y, z) -> None:
         """TODO: force dimensionality check"""
         self.x = x
         self.y = y
@@ -28,7 +28,7 @@ class Location:
 
 class Warehouse:
     """Keep track of where items are in a warehouse"""
-    def __init__(self, *, item_locations: Iterable[Tuple[object, Location]]):
+    def __init__(self, *, item_locations: Iterable[Tuple[object, Location]]) -> None:
         self._item_locs: dict = {}
         for item, loc in item_locations:
             self._item_locs[item] = loc
