@@ -16,7 +16,7 @@ from typing import Iterable, List
 
 class Location:
     """represent the location of some entity in physical coordinates"""
-    def __init__(self, x, y, z):
+    def __init__(self, *, x, y, z):
         """TODO: force dimensionality check"""
         self.x = x
         self.y = y
