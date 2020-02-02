@@ -12,7 +12,7 @@
 Heights represented as z
 """
 
-from typing import Iterable, List
+from typing import Iterable, List, Tuple
 
 class Location:
     """represent the location of some entity in physical coordinates"""
@@ -25,7 +25,7 @@ class Location:
 
 class Warehouse:
     """Keep track of where items are in a warehouse"""
-    def __init__(self, *, item_locations: Iterable[object, Location]):
+    def __init__(self, *, item_locations: Iterable[Tuple[object, Location]]):
         self._item_locs: dict = {}
         for item, loc in item_locations:
             self._item_locs[item] = loc
