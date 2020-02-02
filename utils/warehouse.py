@@ -22,6 +22,9 @@ class Location:
         self.y = y
         self.z = z
 
+    def __repr__(self) -> str:
+        return f"Location(x={self.x}, y={self.y}, x={self.z})"
+
 
 class Warehouse:
     """Keep track of where items are in a warehouse"""
