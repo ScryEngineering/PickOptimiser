@@ -1,5 +1,5 @@
 class Shelving:
-    def __init__(self, *, width, depth, max_weight=None):
+    def __init__(self, *, width, depth, label:str, max_weight=None) -> None:
         """Represent rectangular shelving
         width: the length from which items are accessible
         depth: the length that represents how far the shelving goes back.
